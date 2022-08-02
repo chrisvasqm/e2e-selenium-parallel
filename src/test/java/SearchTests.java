@@ -20,4 +20,11 @@ public class SearchTests extends BaseTests {
         assertThat(results.isHeaderShown("Perro")).isTrue();
     }
 
+    @Test
+    public void search_ForCats_ReturnsCatInfo() {
+        var results = search.find("gato");
+
+        assertThat(results.isHeaderShown("Gato")).isTrue();
+    }
+
 }
