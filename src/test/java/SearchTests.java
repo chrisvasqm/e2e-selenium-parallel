@@ -1,7 +1,8 @@
-import com.google.common.truth.Truth;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.Search;
+
+import static com.google.common.truth.Truth.assertThat;
 
 public class SearchTests extends BaseTests {
     private Search search;
@@ -16,7 +17,7 @@ public class SearchTests extends BaseTests {
     public void search_ForPuppies_ReturnsPuppiesInfo() {
         var results = search.find("perro");
 
-        Truth.assertThat(results.isHeaderShown("Perro")).isTrue();
+        assertThat(results.isHeaderShown("Perro")).isTrue();
     }
 
 }
